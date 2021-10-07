@@ -1,27 +1,21 @@
+import axios from "axios";
+import { NASA_API_URL } from "../constant/constant";
 export const FETCH_START = "FETCH_START";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAIL = "FETCH_FAIL";
-export { cb_nasa_apod_API_call } from "../service/services";
 
 export const getDataNASA = () => (dispatch, cb_nasa_apod_API_call) => {
   //dispatch fetchStart
   dispatch(fetchStart());
 
-  console.log("line 10, index.js in action.js");
-  //https://nodejs.dev/learn/modern-asynchronous-javascript-with-async-and-await
-
-  const call1 = async () => {
-    const object = await cb_nasa_apod_API_call();
-    console.log("object = ", object);
-  };
-
-  call1();
-  //   promise.then((res) => {
-  //     console.log("res = ", res);
-  //   });
-  //   response.then((res) => {
-  //     console.log("res = ", res);
-  //   });
+  axios
+    .get(NASA_API_URL)
+    .then((resp) => {
+      dispatch(fetchSuccess(resp.data));
+    })
+    .catch((err) => {
+      dispatch(fetchFail(err));
+    });
 };
 
 export const fetchStart = () => {
