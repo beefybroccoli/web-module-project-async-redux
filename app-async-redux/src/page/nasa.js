@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { mock_nasa_apod_API_call } from "../service/services";
+import { cb_nasa_apod_API_call } from "../service/services";
+import { getDataNASA } from "../action/index";
+import { connect } from "react-redux";
 
 const Container = styled.div`
   border: solid 1px black;
@@ -12,8 +14,11 @@ const NASA = (props) => {
     {
       /*retrieve arrayOfObject from an API call */
     }
-    const data = mock_nasa_apod_API_call();
-    console.log("data.data.length = ", data.data.length);
+    // const data = mock_nasa_apod_API_call();
+    // console.log("data.data.length = ", data.data.length);
+    // const data = cb_nasa_apod_API_call();
+    // console.log("data = ", data);
+    props.getDataNASA();
   }, []);
 
   return (
@@ -23,5 +28,11 @@ const NASA = (props) => {
     </Container>
   );
 };
+const mapStateToProps = (state) => {
+  return {
+    data: state.data,
+  };
+};
 
-export default NASA;
+const mapActionToProps = { getDataNASA };
+export default connect(mapStateToProps, mapActionToProps)(NASA);

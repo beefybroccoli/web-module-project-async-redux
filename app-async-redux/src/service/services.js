@@ -44,6 +44,9 @@ export const cb_cnbc_API_call_listTrending = () => {
     });
 };
 
+/**
+ * return an object {data:____, error:_____}
+ */
 export const cb_cnbc_API_call_listSpecialReport = () => {
   var options = {
     method: "GET",
@@ -76,6 +79,9 @@ export const mock_cnbc_API_call_listSpecialReport = () => {
   return { data: specialEntries, error: null };
 };
 
+/**
+ * return an object {data:____, error:_____}
+ */
 export const cb_nasa_apod_API_call = () => {
   axios
     .get(NASA_API_URL)
