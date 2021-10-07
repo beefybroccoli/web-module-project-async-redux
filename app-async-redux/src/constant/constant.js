@@ -20,6 +20,8 @@ axios.request(options).then(function (response) {
 
 https://api.nasa.gov/planetary/apod?api_key=SlfHJjvLoBAlf45AFF2pvU1J3uauaDgAh7d4I9y6
 
+https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=SlfHJjvLoBAlf45AFF2pvU1J3uauaDgAh7d4I9y6
+
 ===========================
 
 var options = {

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import { cb_cnbc_API_call } from "../action/index";
 
 const Container = styled.div`
   border: solid 1px black;
@@ -7,9 +8,11 @@ const Container = styled.div`
 const NASA = (props) => {
   const arryOfObject = [];
 
-  useEffect(()=>{
-    {/*retrieve arrayOfObject from an API call */}
-  },[])
+  useEffect(() => {
+    {
+      /*retrieve arrayOfObject from an API call */
+    }
+  }, []);
 
   return (
     <Container>
