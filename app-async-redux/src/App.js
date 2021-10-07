@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./page/home";
 import NASA from "./page/nasa";
 import CNBC from "./page/cnbc";
+import Page404 from "./page/page404";
 
 const Container = styled.div`
   border: 1px solid black;
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/cnbc">
             <CNBC />
+          </Route>
+          <Route>
+            <Page404 />
           </Route>
         </Switch>
       </Main>
