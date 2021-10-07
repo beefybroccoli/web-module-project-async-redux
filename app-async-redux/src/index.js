@@ -4,10 +4,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+//import createStore
+
+//import Provider
 
 ReactDOM.render(
   <BrowserRouter>
     <React.StrictMode>
+      {/* add middleWare */}
+      {/* add logger */}
+      {/* App get access to provider */}
       <App />
     </React.StrictMode>
   </BrowserRouter>,

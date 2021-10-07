@@ -37,4 +37,8 @@ function App() {
   );
 }
 
+//mapStateToProps()
+
+//mapActionToProps()
+
 export default App;
