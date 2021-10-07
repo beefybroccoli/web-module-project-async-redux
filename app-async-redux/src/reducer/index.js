@@ -1,6 +1,5 @@
 import { FETCH_FAIL, FETCH_START, FETCH_SUCCESS } from "../action/index";
 const initialState = {
-  loading: false,
   data: null,
   isFetching: false,
   error: null,
