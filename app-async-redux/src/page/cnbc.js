@@ -16,7 +16,7 @@ const CNBC = (props) => {
       /*retrieve arrayOfObject from an API call */
     }
     const data = mock_cnbc_API_call_listSpecialReport();
-    console.log("data.length = ", data.length);
+    console.log("data.data.length = ", data.data.length);
   }, []);
 
   return (

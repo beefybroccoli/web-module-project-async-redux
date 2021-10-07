@@ -58,28 +58,39 @@ export const cb_cnbc_API_call_listSpecialReport = () => {
   axios
     .request(options)
     .then(function (response) {
+      //console log data
       console.log(response.data.data.specialReportsEntries.results);
+      //return data
+      return {
+        data: response.data.data.specialReportsEntries.results,
+        error: null,
+      };
     })
     .catch(function (error) {
       console.error(error);
+      return { error, data: null };
     });
 };
 
 export const mock_cnbc_API_call_listSpecialReport = () => {
-  return specialEntries;
+  return { data: specialEntries, error: null };
 };
 
 export const cb_nasa_apod_API_call = () => {
   axios
     .get(NASA_API_URL)
     .then((response) => {
+      //console log data
       console.log(response.data);
+      //return data
+      return { data: response.data, error: null };
     })
     .catch((error) => {
       console.error(error);
+      return { error, data: null };
     });
 };
 
 export const mock_nasa_apod_API_call = () => {
-  return nasaData_apod;
+  return { data: nasaData_apod, error: null };
 };

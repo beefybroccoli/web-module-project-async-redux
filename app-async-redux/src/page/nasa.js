@@ -13,7 +13,7 @@ const NASA = (props) => {
       /*retrieve arrayOfObject from an API call */
     }
     const data = mock_nasa_apod_API_call();
-    console.log("data.length = ", data.length);
+    console.log("data.data.length = ", data.data.length);
   }, []);
 
   return (
