@@ -1,0 +1,6 @@
+install
+    _axios
+    _redux
+    _react-redux
+    _styled-components
+    _react-router-dom
