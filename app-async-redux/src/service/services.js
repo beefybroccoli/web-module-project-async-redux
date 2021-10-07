@@ -82,18 +82,16 @@ export const mock_cnbc_API_call_listSpecialReport = () => {
 /**
  * return an object {data:____, error:_____}
  */
-export const cb_nasa_apod_API_call = () => {
+export const cb_nasa_apod_API_call = (input_URL = NASA_API_URL) => {
   axios
-    .get(NASA_API_URL)
-    .then((response) => {
-      //console log data
-      console.log(response.data);
-      //return data
-      return { data: response.data, error: null };
+    // .get(NASA_API_URL)
+    .get(input_URL)
+    .then((res) => {
+      //dispatch to set the global store
+      // retrun {data:res.data, error:null}
     })
-    .catch((error) => {
-      console.error(error);
-      return { error, data: null };
+    .catch((err) => {
+      //dispatch to set error
     });
 };
 
