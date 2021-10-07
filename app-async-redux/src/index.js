@@ -4,11 +4,26 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+//import logger
+import logger from "redux-logger";
+//import thunk
+import thunk from "redux-thunk";
+//import createStore
+import { createStore, applyMiddleware } from "redux";
+//import Provider
+import { Provider } from "react-redux";
+import { reducer } from "./reducer/index";
+
+/* add middleWare, add logger */
+const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+      {/* App get access to provider */}
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </BrowserRouter>,
   document.getElementById("root")
