@@ -8,23 +8,26 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    /* case - fetch start */
+    /* case fetch start - toggle isFetching to true*/
     case FETCH_START:
       return {
         ...state,
         isFetching: true,
       };
 
-    /* case - fetch success */
+    /* case fetch success 
+     - store action.payload in data
+     - toggle isFetching to false */
     case FETCH_SUCCESS:
       return {
         ...state,
         data: action.payload,
         isFetching: false,
-        error: "",
       };
 
-    /* case - fetch fail */
+    /* case fetch fail 
+    - store action.payload in error
+    - toggle isFetching to false */
     case FETCH_FAIL:
       return {
         ...state,

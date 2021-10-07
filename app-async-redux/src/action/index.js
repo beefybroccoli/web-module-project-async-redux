@@ -14,10 +14,10 @@ export const fetchStart = () => {
   return { type: FETCH_START };
 };
 
-export const fetchSuccess = () => {
-  return { type: FETCH_SUCCESS, payload: [] };
+export const fetchSuccess = (input_data) => {
+  return { type: FETCH_SUCCESS, payload: input_data };
 };
 
-export const fetchFail = () => {
-  return { type: FETCH_FAIL, payload: [] };
+export const fetchFail = (input_error) => {
+  return { type: FETCH_FAIL, payload: input_error };
 };
