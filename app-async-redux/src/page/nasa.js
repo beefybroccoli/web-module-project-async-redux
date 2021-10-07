@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { cb_cnbc_API_call_listTrending } from "../action/index";
+import { mock_nasa_apod_API_call } from "../service/services";
 
 const Container = styled.div`
   border: solid 1px black;
@@ -12,7 +12,8 @@ const NASA = (props) => {
     {
       /*retrieve arrayOfObject from an API call */
     }
-    cb_cnbc_API_call_listTrending();
+    const data = mock_nasa_apod_API_call();
+    console.log("data.length = ", data.length);
   }, []);
 
   return (

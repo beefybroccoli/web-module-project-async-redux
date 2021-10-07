@@ -1,3 +1,6 @@
+export const NASA_API_URL =
+  "https://api.nasa.gov/planetary/apod?start_date=2021-10-01&end_date=2021-10-07&api_key=SlfHJjvLoBAlf45AFF2pvU1J3uauaDgAh7d4I9y6";
+
 /*
 ===========================
 var options = {
