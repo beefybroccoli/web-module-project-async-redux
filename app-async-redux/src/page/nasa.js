@@ -8,6 +8,9 @@ const Container = styled.div`
   border: solid 1px black;
 `;
 const NASA = (props) => {
+  useEffect(() => {
+    props.getDataNASA();
+  }, []);
   return (
     <Container>
       <h3>NASA.js</h3>

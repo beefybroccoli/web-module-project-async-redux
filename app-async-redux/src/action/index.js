@@ -4,7 +4,7 @@ export const FETCH_START = "FETCH_START";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAIL = "FETCH_FAIL";
 
-export const getDataNASA = () => (dispatch, cb_nasa_apod_API_call) => {
+export const getDataNASA = () => (dispatch) => {
   //dispatch fetchStart
   dispatch(fetchStart());
 
