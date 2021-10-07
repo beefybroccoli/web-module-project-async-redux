@@ -1,19 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import NASA from "./nasa";
-import CNBC from "./cnbc";
 
 const Container = styled.div`
   border: solid 1px black;
 `;
-const Home = (props) => {
+const NASA = (props) => {
   return (
     <Container>
-      <h3>Home.js</h3>
-      <NASA />
-      <CNBC />
+      <h3>NASA.js</h3>
     </Container>
   );
 };
 
-export default Home;
+export default NASA;

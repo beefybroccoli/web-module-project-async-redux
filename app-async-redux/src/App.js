@@ -2,6 +2,8 @@ import styled from "styled-components";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Home from "./page/home";
+import NASA from "./page/nasa";
+import CNBC from "./page/cnbc";
 
 const Container = styled.div`
   border: 1px solid black;
@@ -22,6 +24,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/nasa">
+            <NASA />
+          </Route>
+          <Route path="/cnbc">
+            <CNBC />
           </Route>
         </Switch>
       </Main>
