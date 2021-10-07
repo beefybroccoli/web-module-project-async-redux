@@ -14,7 +14,7 @@ const NASA = (props) => {
   return (
     <Container>
       <h3>NASA.js</h3>
-      {props.isFetching && <p>...fetching</p>}
+      {!props.data && <p>...fetching</p>}
       {props.data && <p>length of array = {props.data.length}</p>}
     </Container>
   );
@@ -22,7 +22,6 @@ const NASA = (props) => {
 const mapStateToProps = (state) => {
   return {
     data: state.data,
-    isFetching: state.isFetching,
   };
 };
 
