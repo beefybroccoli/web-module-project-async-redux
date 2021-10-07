@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
+import Home from "./page/home";
 
+const Container = styled.div`
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  height: 95vh;
+`;
+const Main = styled.main`
+  border: 1px solid blue;
+`;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Container>
+      <header>
+        <h1>App.js - App-Async-Redux</h1>
       </header>
-    </div>
+      <Main>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Main>
+    </Container>
   );
 }
 
